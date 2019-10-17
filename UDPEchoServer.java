@@ -50,10 +50,11 @@ else if(messageIn.equalsIgnoreCase("time")){
   dgramSocket.send(outPacket);
 }
 else{
-  messageOut = ("Message " + numMessages+ ": Please insert key word (date , time)");
+  messageOut = ("error");
   outPacket = new DatagramPacket(messageOut.getBytes(),messageOut.length(),clientAddress,clientPort); //Step 7.
   dgramSocket.send(outPacket);
 }
+
 
 
 //Step 8.
